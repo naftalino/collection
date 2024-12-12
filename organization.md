@@ -18,6 +18,7 @@
     - Qnt. de cartas
     - As cartas em si
     - Pertence à alguma subobra (estúdio, empresa, etc)
+    - Descrição
 
 - Cartas
     - ID

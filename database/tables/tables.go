@@ -12,9 +12,9 @@ type User struct {
 }
 
 type Category struct {
-}
-
-type SubCategory struct {
+	ID           int
+	Nome         int
+	ObrasLigadas []int
 }
 
 type Collection struct {
@@ -24,25 +24,41 @@ type Collection struct {
 }
 
 type Card struct {
+	ID       int
+	Foto     string
+	Nome     string
+	IdObra   int
+	Raridade int // 1: comum, 2:raro, 3:lendário
 }
 
 type Serie struct {
+	ID        int
+	Foto      string
+	Nome      string
+	QntCartas int
+	Descricao string
 }
 
 type Shop struct {
+	ItemTipo   string
+	Valor      int
+	Disponivel bool
 }
 
 type Events struct {
-}
-
-type RankingBiggestCollection struct {
+	Nome      string
+	Descricao string
+	Presentes []int
 }
 
 type Admins struct {
+	UserID string
 }
 
 type Owner struct {
+	UserID string
 }
 
-type Gifts struct {
+type Reward struct {
+	Presente string
 }

@@ -1,7 +1,7 @@
-package main
+package commands
 
 import (
-	commands "app/commands/user"
+	commands "app/bot/commands/user"
 	"context"
 	"log"
 	"os"
@@ -20,6 +20,8 @@ func StartBot() {
 	}
 
 	b.RegisterHandler(bot.HandlerTypeMessageText, "/start", bot.MatchTypeContains, commands.StartCommand)
+	b.RegisterHandler(bot.HandlerTypeMessageText, "/help", bot.MatchTypePrefix, commands.HelpCommand)
+
 	log.Println("[!] Bot rodando")
 
 	b.Start(ctx)

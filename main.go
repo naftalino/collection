@@ -1,8 +1,11 @@
 package main
 
-import "app/web"
+import (
+	commands "app/bot"
+	"app/web"
+)
 
 func main() {
-	go StartBot()
+	go commands.StartBot()
 	web.StartServer()
 }
